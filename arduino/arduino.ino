@@ -3,15 +3,8 @@
 */
 #include <ESP8266WiFi.h>
 #include <PubSubClient.h>
+#include "secret-config.h"
 
-// Update these with values suitable for your network.
-const char* ssid = "your_ssid";
-const char* password = "your_password";
-const char* mqtt_server = "192.168.0.121"; 
-const char* mqtt_user = "admin";
-const char* mqtt_pass= "admin";
-
-const int mq2pin = A0; //the MQ2 analog input pin
 
 WiFiClient espClient;
 PubSubClient client(espClient);
@@ -26,6 +19,23 @@ void setup_wifi() {
   Serial.println("WiFi connected");
   Serial.println("IP address: ");
   Serial.println(WiFi.localIP());
+}
+
+float getTemperature() {
+  const int tempPin = 17;
+  int reading = analogRead(tempPin);  
+ 
+	// converting that reading to voltage, for 3.3v arduino use 3.3
+  float voltage = reading * 3.3;
+  voltage /= 1024.0; 
+  float temperatureC = (voltage - 0.5) * 100 ;
+  Serial.print(temperatureC);
+  Serial.println(" °C");
+  return temperatureC;
+}
+
+String getTemperatureJSON() {
+  return String("{\"temperature\":\"")+String(getTemperature())+String("\"}");
 }
 
 void reconnect() {
@@ -52,15 +62,15 @@ void setup() {
 }
 
 void loop() {
-  char msg[8];
+  String payload = getTemperatureJSON();
+	
   if (!client.connected()) {
     reconnect();
   }
 
-  sprintf(msg,"%i",analogRead(mq2pin));
-  client.publish("mq2_mqtt", msg);
-  Serial.print("MQ2 gas value:");
-  Serial.println(msg);
+  client.publish("mq2_mqtt", payload);
+  Serial.print("Payload: ");
+  Serial.println(payload);
 
   delay(5000);
 }
