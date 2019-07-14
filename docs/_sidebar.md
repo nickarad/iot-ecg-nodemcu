@@ -1,4 +1,6 @@
-* [Home](/)
-* [Schematics](schematics.md)
-* [Google Cloud IoT](google-iot.md)
-* [References](references.md)
+- [Home](/)
+- [Schematics](schematics.md)
+- Deployment
+    - [RabbitMQ](deployment/rabbitmq.md)
+    - [Google Cloud IoT](deployment/google-iot.md)
+- [References](references.md)
