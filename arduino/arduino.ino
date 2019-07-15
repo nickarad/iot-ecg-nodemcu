@@ -74,7 +74,10 @@ void loop() {
   // Desired sample rate T=7812microseconds
   if (micros() - lastMicros > 7812) {
     lastMicros = micros();
-    sprintf(msg,"%i",analogRead(17));
+    float voltage = reading * 3.3;
+    voltage /= 1024.0; 
+    float temperatureC = (voltage - 0.5) * 100 ;
+    sprintf(msg,"%i",temperatureC);
     Serial.print("temperature read");
 
     if (!client.connected()) {
