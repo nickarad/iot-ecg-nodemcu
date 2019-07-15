@@ -8,6 +8,10 @@
 
 WiFiClient espClient;
 PubSubClient client(espClient);
+String msg;
+char payload[50];
+unsigned long lastMicros = 0;
+
 
 void setup_wifi() {
   // Connecting to a WiFi network
@@ -62,15 +66,24 @@ void setup() {
 }
 
 void loop() {
-  String payload = getTemperatureJSON();
-	
-  if (!client.connected()) {
-    reconnect();
+  // msg = getTemperatureJSON();
+	// msg.toCharArray(payload, 50);
+
+  char msg[8];
+
+  // Desired sample rate T=7812microseconds
+  if (micros() - lastMicros > 7812) {
+    lastMicros = micros();
+    sprintf(msg,"%i",analogRead(17));
+    Serial.print("temperature read");
+
+    if (!client.connected()) {
+      Serial.print("trying to reconnect...");
+      reconnect();
+    }
+
+    client.publish("mq2_mqtt", msg);
+    Serial.print("Payload: ");
+    Serial.println(msg);
   }
-
-  client.publish("mq2_mqtt", payload);
-  Serial.print("Payload: ");
-  Serial.println(payload);
-
-  delay(5000);
 }
