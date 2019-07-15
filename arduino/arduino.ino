@@ -56,7 +56,7 @@ void reconnect() {
 }
 
 void setup() {
-  Serial.begin(9600);
+  Serial.begin(115200);
   setup_wifi();
   client.setServer(mqtt_server, 1883);
 }
