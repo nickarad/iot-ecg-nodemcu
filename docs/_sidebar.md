@@ -1,5 +1,12 @@
 - [Home](/)
-- [Schematics](schematics.md)
+- Getting Started
+    - [Architecture](getting-started/architecture.md)
+    - [Quickstart](getting-started/quickstart.md)
+- Arduino
+    - [Requirements](arduino/requirements.md)
+    - [Setup](arduino/setup.md)
+- Hardware
+    - [Schematics](schematics.md)
 - Deployment
     - [RabbitMQ](deployment/rabbitmq.md)
     - [Google Cloud IoT](deployment/google-iot.md)
