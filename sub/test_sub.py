@@ -6,14 +6,15 @@ from drawnow import *
 
 plt.ion() #Tell matplotlib you want interactive mode to plot live data
 cnt=0
-tempF= []
+tempC= []
 
 def makeFig(): #Create a function that makes our desired plot
-    plt.ylim(150,350)                                 #Set y min and max values
+    plt.ylim(10,40)     
+    plt.style.use('ggplot')                            #Set y min and max values
     plt.title('My Live Streaming Sensor Data')      #Plot the title
     plt.grid(True)                                  #Turn the grid on
-    plt.ylabel('Temp F')                            #Set ylabels
-    plt.plot(tempF, 'ro-', label='Degrees F')       #plot the temperature
+    plt.ylabel('Temp Celcius')                            #Set ylabels
+    plt.plot(tempC, 'bo-', label='Degrees C')       #plot the temperature
     plt.legend(loc='upper left')                    #plot the legend
                   #plot the legend
 
