@@ -1,1 +1,3 @@
 arduino/secret-config.h
+*.bin
+*.elf
