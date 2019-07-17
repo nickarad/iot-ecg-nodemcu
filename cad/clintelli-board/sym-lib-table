@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name clintelli-board-rescue)(type Legacy)(uri ${KIPRJMOD}/clintelli-board-rescue.lib)(options "")(descr ""))
+)
