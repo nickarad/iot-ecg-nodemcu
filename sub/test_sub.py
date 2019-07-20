@@ -5,8 +5,8 @@ import matplotlib.pyplot as plt #import matplotlib library
 from drawnow import *
 
 plt.ion() #Tell matplotlib you want interactive mode to plot live data
-cnt=0
-tempC= []
+cnt = 0
+ecg = []
 
 def makeFig(): #Create a function that makes our desired plot
     # plt.ylim(0,1)     
@@ -14,7 +14,7 @@ def makeFig(): #Create a function that makes our desired plot
     plt.title('My Live Streaming Sensor Data')      #Plot the title
     plt.grid(True)                                  #Turn the grid on
     plt.ylabel('ECG')                            #Set ylabels
-    plt.plot(tempC, label='ecg')       #plot the temperature
+    plt.plot(ecg, label='ecg')       #plot the temperature
     plt.legend(loc='upper left')                    #plot the legend
                   #plot the legend
 
@@ -26,12 +26,12 @@ def on_connect(client, userdata, flags, rc):
 def on_message(client, userdata, message):
     print("Received message '" + str(message.payload) + "' on topic '"
         + message.topic + "' with QoS " + str(message.qos))
-    temp =  float(message.payload)
-    tempC.append(temp) 
+    data =  float(message.payload)
+    ecg.append(data) 
     drawnow(makeFig)                       #Call drawnow to update our live graph
     plt.pause(.000001)                     #Pause Briefly. Important to keep drawnow from crashing
-    cnt=cnt+1
-    if(cnt>50):                            #If you have 50 or more points, delete the first one from the array
+    cnt = cnt + 1
+    if(cnt > 50):                            #If you have 50 or more points, delete the first one from the array
         tempC.pop(0)                       #This allows us to just see the last 50 data points
         
 
