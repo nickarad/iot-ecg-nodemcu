@@ -73,7 +73,7 @@ void loop() {
 		}
 
 		client.publish("mq2_mqtt", msg);
-		Serial.print("Payload: ");
+		//Serial.print("Payload: ");
 		Serial.println(msg);
 	}
 }

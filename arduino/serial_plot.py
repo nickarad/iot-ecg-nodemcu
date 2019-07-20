@@ -10,13 +10,14 @@ serialArduino = serial.Serial('/dev/ttyUSB0', 115200)
 
 def plotValues():
 	plt.title('Serial value from Arduino')
+	plt.style.use('ggplot') 
 	plt.grid(True)
 	plt.ylabel('Values')
 	plt.plot(values, 'b')
 	plt.legend(loc='upper right')
 
 #pre-load dummy data
-for i in range(0,400):
+for i in range(0,100):
 	values.append(0)
 	
 while True:
