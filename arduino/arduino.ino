@@ -15,7 +15,7 @@ const int analogInPin = 17;
 float getECG(void) {
 	float analog0;
 	// Read from analogic in. 
-	analog0=analogRead(analogInPin);
+	analog0 = analogRead(analogInPin);
 	// binary to voltage conversion
 	return analog0 = (float)analog0 * 3.3 / 1023.0;   
 }
