@@ -9,12 +9,12 @@ cnt=0
 tempC= []
 
 def makeFig(): #Create a function that makes our desired plot
-    plt.ylim(10,40)     
+    # plt.ylim(0,1)     
     plt.style.use('ggplot')                            #Set y min and max values
     plt.title('My Live Streaming Sensor Data')      #Plot the title
     plt.grid(True)                                  #Turn the grid on
-    plt.ylabel('Temp Celcius')                            #Set ylabels
-    plt.plot(tempC, 'ro-', label='Degrees C')       #plot the temperature
+    plt.ylabel('ECG')                            #Set ylabels
+    plt.plot(tempC, label='ecg')       #plot the temperature
     plt.legend(loc='upper left')                    #plot the legend
                   #plot the legend
 
@@ -37,7 +37,7 @@ def on_message(client, userdata, message):
 
 client = mqtt.Client()
 client.username_pw_set("rabbitmq", password='rabbitmq')
-client.connect("192.168.0.129", 1883) 
+client.connect("192.168.1.7", 1883) 
 
 client.on_connect = on_connect       #attach function to callback
 client.on_message = on_message       #attach function to callback
