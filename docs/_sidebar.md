@@ -6,8 +6,9 @@
     - [Requirements](arduino/requirements.md)
     - [Setup](arduino/setup.md)
 - Hardware
-    - [Schematics](schematics.md)
+    - [Prototype Schematics](hardware/prototype-schematics.md)
+    - [Custom Hardware](hardware/custom-hardware.md)
 - Deployment
     - [RabbitMQ](deployment/rabbitmq.md)
-    - [Google Cloud IoT](deployment/google-iot.md)
+    - [Google Cloud IoT - Deprecated](deployment/google-iot.md)
 - [References](references.md)

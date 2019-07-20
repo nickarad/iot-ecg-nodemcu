@@ -1,4 +1,4 @@
-# Google Cloud IoT setup
+# Google Cloud IoT setup [DEPRECATED]
 
 ## Requirements
 
