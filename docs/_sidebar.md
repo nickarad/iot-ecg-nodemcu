@@ -8,6 +8,7 @@
 - Hardware
     - [Prototype Schematics](hardware/prototype-schematics.md)
     - [Custom Hardware](hardware/custom-hardware.md)
+    - [Datasheets](hardware/datasheets.md)
 - Deployment
     - [RabbitMQ](deployment/rabbitmq.md)
     - [Google Cloud IoT - Deprecated](deployment/google-iot.md)

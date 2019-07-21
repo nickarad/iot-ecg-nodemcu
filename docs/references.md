@@ -14,3 +14,7 @@ https://www.rabbitmq.com/mqtt.html
 
 ### DIY Arduino
 https://github.com/baldengineer/addohms/tree/master/Episode%2023%20Corrected
+
+### Serial Peripheral Interface (SPI)
+https://learn.sparkfun.com/tutorials/serial-peripheral-interface-spi/all
+
