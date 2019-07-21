@@ -4,6 +4,8 @@ import paho.mqtt.client as mqtt
 import matplotlib.pyplot as plt #import matplotlib library
 from drawnow import *
 
+
+
 plt.ion() #Tell matplotlib you want interactive mode to plot live data
 cnt = 0
 ecg = []
@@ -26,6 +28,7 @@ def plotValues():
     plt.ylabel('EECG')
     plt.plot(values, 'b', label='ecg')
     plt.legend(loc='upper right')
+    
 
 #pre-load dummy data
 for i in range(0,100):
@@ -37,6 +40,9 @@ def on_connect(client, userdata, flags, rc):
 def on_message(client, userdata, message):
     print("Received message '" + str(message.payload) + "' on topic '"
         + message.topic + "' with QoS " + str(message.qos))
+    with open('ecg.txt','a+') as f:
+         f.write(message.payload + "\n")
+    # sample = sample + 1
     data =  float(message.payload)
     valueRead = data
 
