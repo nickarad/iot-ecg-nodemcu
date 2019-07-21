@@ -952,17 +952,17 @@ Wire Wire Line
 Wire Wire Line
 	14200 8200 14500 8200
 Text Label 13300 8000 0    50   ~ 0
-V1
+C1
 Text Label 13300 8100 0    50   ~ 0
-V2
+C2
 Text Label 13300 8200 0    50   ~ 0
-V3
+C3
 Text Label 14500 8000 0    50   ~ 0
-V4
+C4
 Text Label 14500 8100 0    50   ~ 0
-V5
+C5
 Text Label 14500 8200 0    50   ~ 0
-V6
+C6
 $Comp
 L clintelli-board-rescue:GND #PWR?
 U 1 1 5D469CCB

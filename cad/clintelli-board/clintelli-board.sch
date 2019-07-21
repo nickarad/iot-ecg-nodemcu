@@ -987,4 +987,36 @@ F 3 "" H 14000 8400 50  0001 C CNN
 $EndComp
 Text Notes 13200 7700 0    50   ~ 0
 Precordial Leads
+Wire Wire Line
+	4100 3600 4350 3600
+Wire Wire Line
+	2700 4800 2150 4800
+Wire Wire Line
+	2700 4900 2150 4900
+Wire Wire Line
+	2700 5000 2150 5000
+Text Label 4350 3600 0    50   ~ 0
+SPI3_NSS
+Text Label 2150 4800 0    50   ~ 0
+SPI3_SCK
+Text Label 2150 4900 0    50   ~ 0
+SPI3_MISO
+Text Label 2150 5000 0    50   ~ 0
+SPI3_MOSI
+Wire Wire Line
+	10650 2350 10900 2350
+Wire Wire Line
+	10650 2450 10900 2450
+Wire Wire Line
+	10650 2550 10900 2550
+Wire Wire Line
+	10650 2650 10900 2650
+Text Label 10900 2350 0    50   ~ 0
+SPI3_MISO
+Text Label 10900 2450 0    50   ~ 0
+SPI3_MOSI
+Text Label 10900 2550 0    50   ~ 0
+SPI3_SCK
+Text Label 10900 2650 0    50   ~ 0
+SPI3_NSS
 $EndSCHEMATC
