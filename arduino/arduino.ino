@@ -38,7 +38,8 @@ void reconnect() {
 	while (!client.connected()) {
 		Serial.print("Attempting MQTT connection...");
 		// Attempt to connect
-		if (client.connect("Arduino_Gas", mqtt_user, mqtt_pass)) {
+		// boolean connect (clientID, username, password, willTopic, willQoS, willRetain, willMessage)
+		if (client.connect(WiFi.macAddress(), mqtt_user, mqtt_pass, "willTopic", 2, 0, "willMessage")) {
 			Serial.println("connected");
 		} 
 		else {

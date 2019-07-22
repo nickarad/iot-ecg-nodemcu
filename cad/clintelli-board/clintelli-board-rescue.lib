@@ -1,11 +1,11 @@
 EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
-# +3.3V-Pyramiduino-rescue
+# +3.3V
 #
-DEF +3.3V-Pyramiduino-rescue #PWR 0 0 Y Y 1 F P
+DEF +3.3V #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 0 -150 50 H I C CNN
-F1 "+3.3V-Pyramiduino-rescue" 0 140 50 H V C CNN
+F1 "+3.3V" 0 140 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -16,11 +16,11 @@ X +3V3 1 0 0 0 U 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #
-# ATMEGA328-A-Pyramiduino-rescue
+# ATMEGA328-A
 #
-DEF ATMEGA328-A-Pyramiduino-rescue IC 0 40 Y Y 1 F N
+DEF ATMEGA328-A IC 0 40 Y Y 1 F N
 F0 "IC" -750 1250 40 H V L BNN
-F1 "ATMEGA328-A-Pyramiduino-rescue" 400 -1400 40 H V L BNN
+F1 "ATMEGA328-A" 400 -1400 40 H V L BNN
 F2 "TQFP32" 0 0 30 H V C CIN
 F3 "" 0 0 60 H V C CNN
 DRAW
@@ -60,11 +60,11 @@ X (PCINT21/OC0B/T1)PD5 9 1000 -1000 150 L 40 40 1 1 B
 ENDDRAW
 ENDDEF
 #
-# C-Pyramiduino-rescue
+# C
 #
-DEF C-Pyramiduino-rescue C 0 10 N Y 1 F N
+DEF C C 0 10 N Y 1 F N
 F0 "C" 25 100 50 H V L CNN
-F1 "C-Pyramiduino-rescue" 25 -100 50 H V L CNN
+F1 "C" 25 -100 50 H V L CNN
 F2 "" 38 -150 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -78,11 +78,11 @@ X ~ 2 0 -150 110 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# CONN_01X01-Pyramiduino-rescue
+# CONN_01X01
 #
-DEF CONN_01X01-Pyramiduino-rescue P 0 40 Y N 1 F N
+DEF CONN_01X01 P 0 40 Y N 1 F N
 F0 "P" 0 100 50 H V C CNN
-F1 "CONN_01X01-Pyramiduino-rescue" 100 0 50 V V C CNN
+F1 "CONN_01X01" 100 0 50 V V C CNN
 F2 "" 0 0 60 H V C CNN
 F3 "" 0 0 60 H V C CNN
 $FPLIST
@@ -98,11 +98,11 @@ X P1 1 -200 0 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# CONN_01X14-Pyramiduino-rescue
+# CONN_01X14
 #
-DEF CONN_01X14-Pyramiduino-rescue P 0 40 Y N 1 F N
+DEF CONN_01X14 P 0 40 Y N 1 F N
 F0 "P" 0 750 50 H V C CNN
-F1 "CONN_01X14-Pyramiduino-rescue" 100 0 50 V V C CNN
+F1 "CONN_01X14" 100 0 50 V V C CNN
 F2 "" 0 0 60 H V C CNN
 F3 "" 0 0 60 H V C CNN
 $FPLIST
@@ -144,11 +144,11 @@ X P9 9 -200 -150 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# CONN_01X15-Pyramiduino-rescue
+# CONN_01X15
 #
-DEF CONN_01X15-Pyramiduino-rescue P 0 40 Y N 1 F N
+DEF CONN_01X15 P 0 40 Y N 1 F N
 F0 "P" 0 800 50 H V C CNN
-F1 "CONN_01X15-Pyramiduino-rescue" 100 0 50 V V C CNN
+F1 "CONN_01X15" 100 0 50 V V C CNN
 F2 "" 0 0 60 H V C CNN
 F3 "" 0 0 60 H V C CNN
 $FPLIST
@@ -192,11 +192,11 @@ X P9 9 -200 -100 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# CONN_01X16-Pyramiduino-rescue
+# CONN_01X16
 #
-DEF CONN_01X16-Pyramiduino-rescue P 0 40 Y N 1 F N
+DEF CONN_01X16 P 0 40 Y N 1 F N
 F0 "P" 0 850 50 H V C CNN
-F1 "CONN_01X16-Pyramiduino-rescue" 100 0 50 V V C CNN
+F1 "CONN_01X16" 100 0 50 V V C CNN
 F2 "" 0 0 60 H V C CNN
 F3 "" 0 0 60 H V C CNN
 $FPLIST
@@ -242,11 +242,11 @@ X P9 9 -200 -50 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Crystal_GND24-Pyramiduino-rescue
+# Crystal_GND24
 #
-DEF Crystal_GND24-Pyramiduino-rescue Y 0 40 Y N 1 F N
+DEF Crystal_GND24 Y 0 40 Y N 1 F N
 F0 "Y" 125 200 50 H V L CNN
-F1 "Crystal_GND24-Pyramiduino-rescue" 125 125 50 H V L CNN
+F1 "Crystal_GND24" 125 125 50 H V L CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -269,11 +269,11 @@ X 4 4 0 -200 50 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# GND-Pyramiduino-rescue
+# GND
 #
-DEF GND-Pyramiduino-rescue #PWR 0 0 Y Y 1 F P
+DEF GND #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 0 -250 50 H I C CNN
-F1 "GND-Pyramiduino-rescue" 0 -150 50 H V C CNN
+F1 "GND" 0 -150 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -282,11 +282,11 @@ X GND 1 0 0 0 D 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #
-# INDUCTOR-Pyramiduino-rescue
+# INDUCTOR
 #
-DEF INDUCTOR-Pyramiduino-rescue L 0 40 N N 1 F N
+DEF INDUCTOR L 0 40 N N 1 F N
 F0 "L" -50 0 50 V V C CNN
-F1 "INDUCTOR-Pyramiduino-rescue" 100 0 50 V V C CNN
+F1 "INDUCTOR" 100 0 50 V V C CNN
 F2 "" 0 0 60 H V C CNN
 F3 "" 0 0 60 H V C CNN
 DRAW
@@ -299,11 +299,11 @@ X 2 2 0 -300 100 U 70 70 1 1 P
 ENDDRAW
 ENDDEF
 #
-# LED-Pyramiduino-rescue
+# LED
 #
-DEF LED-Pyramiduino-rescue D 0 40 Y N 1 F N
+DEF LED D 0 40 Y N 1 F N
 F0 "D" 0 100 50 H V C CNN
-F1 "LED-Pyramiduino-rescue" 0 -100 50 H V C CNN
+F1 "LED" 0 -100 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -320,11 +320,11 @@ X A 2 150 0 100 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# MIC5504-3.3YM5-Pyramiduino-rescue
+# MIC5504-3.3YM5
 #
-DEF MIC5504-3.3YM5-Pyramiduino-rescue U 0 20 Y Y 1 F N
+DEF MIC5504-3.3YM5 U 0 20 Y Y 1 F N
 F0 "U" -300 350 50 H V L CNN
-F1 "MIC5504-3.3YM5-Pyramiduino-rescue" -300 250 50 H V L CNN
+F1 "MIC5504-3.3YM5" -300 250 50 H V L CNN
 F2 "Package_TO_SOT_SMD:SOT-23-5" 0 -400 50 H I C CNN
 F3 "" -250 250 50 H I C CNN
 $FPLIST
@@ -340,11 +340,11 @@ X VOUT 5 400 100 100 L 50 50 1 1 w
 ENDDRAW
 ENDDEF
 #
-# R-Pyramiduino-rescue
+# R
 #
-DEF R-Pyramiduino-rescue R 0 0 N Y 1 F N
+DEF R R 0 0 N Y 1 F N
 F0 "R" 80 0 50 V V C CNN
-F1 "R-Pyramiduino-rescue" 0 0 50 V V C CNN
+F1 "R" 0 0 50 V V C CNN
 F2 "" -70 0 50 V I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -358,11 +358,11 @@ X ~ 2 0 -150 50 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# SW_PUSH-Pyramiduino-rescue
+# SW_PUSH
 #
-DEF SW_PUSH-Pyramiduino-rescue SW 0 40 N N 1 F N
+DEF SW_PUSH SW 0 40 N N 1 F N
 F0 "SW" 150 110 50 H V C CNN
-F1 "SW_PUSH-Pyramiduino-rescue" 0 -80 50 H V C CNN
+F1 "SW_PUSH" 0 -80 50 H V C CNN
 F2 "" 0 0 60 H V C CNN
 F3 "" 0 0 60 H V C CNN
 DRAW
@@ -373,11 +373,11 @@ X 2 2 300 0 200 L 60 60 0 1 P I
 ENDDRAW
 ENDDEF
 #
-# VCC-Pyramiduino-rescue
+# VCC
 #
-DEF VCC-Pyramiduino-rescue #PWR 0 0 Y Y 1 F P
+DEF VCC #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 0 -150 50 H I C CNN
-F1 "VCC-Pyramiduino-rescue" 0 150 50 H V C CNN
+F1 "VCC" 0 150 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
