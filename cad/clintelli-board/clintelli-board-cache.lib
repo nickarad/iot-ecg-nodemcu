@@ -80,51 +80,90 @@ X IN4N 9 -800 600 100 R 50 50 1 1 I
 ENDDRAW
 ENDDEF
 #
-# Connector_AudioJack3_Ground
+# Connector_AudioJack3
 #
-DEF Connector_AudioJack3_Ground J 0 20 Y Y 1 F N
+DEF Connector_AudioJack3 J 0 20 Y Y 1 F N
 F0 "J" 0 350 50 H V C CNN
-F1 "Connector_AudioJack3_Ground" 0 250 50 H V C CNN
+F1 "Connector_AudioJack3" 0 250 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
  Jack*
 $ENDFPLIST
 DRAW
-S -200 -100 -250 -200 0 1 10 F
+S -200 -200 -250 -100 0 1 10 F
 S 100 150 -200 -200 0 1 10 f
 P 4 0 1 10 0 -100 25 -125 50 -100 100 -100 N
 P 5 0 1 10 -75 -100 -50 -125 -25 -100 -25 0 100 0 N
 P 5 0 1 10 100 100 -100 100 -100 -100 -125 -125 -150 -100 N
-X ~ G 0 -300 100 U 50 50 1 1 P
 X ~ R 200 0 100 L 50 50 1 1 P
 X ~ S 200 100 100 L 50 50 1 1 P
 X ~ T 200 -100 100 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Connector_AudioJack4_Ground
+# Connector_AudioJack4
 #
-DEF Connector_AudioJack4_Ground J 0 20 Y Y 1 F N
+DEF Connector_AudioJack4 J 0 20 Y Y 1 F N
 F0 "J" 0 350 50 H V C CNN
-F1 "Connector_AudioJack4_Ground" 0 250 50 H V C CNN
+F1 "Connector_AudioJack4" 0 250 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
  Jack*
 $ENDFPLIST
 DRAW
-S -250 -300 -300 -200 0 1 10 F
+S -250 -200 -300 -300 0 1 10 F
 S 100 150 -250 -300 0 1 10 f
 P 4 0 1 10 0 -200 25 -225 50 -200 100 -200 N
 P 5 0 1 10 -225 -200 -200 -225 -175 -200 -175 100 100 100 N
 P 5 0 1 10 -75 -200 -50 -225 -25 -200 -25 -100 100 -100 N
 P 5 0 1 10 100 0 -100 0 -100 -200 -125 -225 -150 -200 N
-X ~ G 0 -400 100 U 50 50 1 1 P
 X ~ R1 200 -100 100 L 50 50 1 1 P
 X ~ R2 200 0 100 L 50 50 1 1 P
 X ~ S 200 100 100 L 50 50 1 1 P
 X ~ T 200 -200 100 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Device_Crystal_GND2
+#
+DEF Device_Crystal_GND2 Y 0 40 Y N 1 F N
+F0 "Y" 0 225 50 H V C CNN
+F1 "Device_Crystal_GND2" 0 150 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ Crystal*
+$ENDFPLIST
+DRAW
+S -45 100 45 -100 0 1 12 N
+P 2 0 1 0 -100 0 -75 0 N
+P 2 0 1 20 -75 -50 -75 50 N
+P 2 0 1 0 0 -150 0 -140 N
+P 2 0 1 0 75 0 100 0 N
+P 2 0 1 20 75 50 75 -50 N
+P 4 0 1 0 -100 -90 -100 -140 100 -140 100 -90 N
+X 1 1 -150 0 50 R 50 50 1 1 P
+X 2 2 0 -200 50 U 50 50 1 1 P
+X 3 3 150 0 50 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Device_R
+#
+DEF Device_R R 0 0 N Y 1 F N
+F0 "R" 80 0 50 V V C CNN
+F1 "Device_R" 0 0 50 V V C CNN
+F2 "" -70 0 50 V I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ R_*
+$ENDFPLIST
+DRAW
+S -40 -100 40 100 0 1 10 N
+X ~ 1 0 150 50 D 50 50 1 1 P
+X ~ 2 0 -150 50 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
@@ -332,33 +371,6 @@ DRAW
 S -50 5 10 -5 0 1 0 N
 S -50 50 50 -50 0 1 0 N
 X P1 1 -200 0 150 R 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# clintelli-board-rescue_Crystal_GND24
-#
-DEF clintelli-board-rescue_Crystal_GND24 Y 0 40 Y N 1 F N
-F0 "Y" 125 200 50 H V L CNN
-F1 "clintelli-board-rescue_Crystal_GND24" 125 125 50 H V L CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-$FPLIST
- Crystal*
-$ENDFPLIST
-DRAW
-S -45 100 45 -100 0 1 12 N
-P 2 0 1 0 -100 0 -80 0 N
-P 2 0 1 20 -80 -50 -80 50 N
-P 2 0 1 0 0 -150 0 -140 N
-P 2 0 1 0 0 140 0 150 N
-P 2 0 1 20 80 -50 80 50 N
-P 2 0 1 0 80 0 100 0 N
-P 4 0 1 0 -100 -90 -100 -140 100 -140 100 -90 N
-P 4 0 1 0 -100 90 -100 140 100 140 100 90 N
-X 1 1 -150 0 50 R 50 50 1 1 P
-X 2 2 0 200 50 D 50 50 1 1 P
-X 3 3 150 0 50 L 50 50 1 1 P
-X 4 4 0 -200 50 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #

@@ -4,7 +4,7 @@ In order to transform the clintelli IoT wearable prototype into a production rea
 decided to design our own customized, open-source, arduino-based microcontroller board, 
 the **Clintelli board**.
 
-## Overview
+## Schematics
 
 ![](../img/clintelli-board.png)
 
@@ -35,3 +35,11 @@ the **Clintelli board**.
 | MISO | 12 | 52 | SPI3_MISO |
 | SCK | 14 | 51 | SPI3_SCK |
 | SS | 15 | 50 | SPI3_NSS |
+
+## PCB Layout
+
+![](../img/clintelli-board-pcb.png)
+
+## PCB Render
+
+![](../img/clintelli-board-pcb-render.jpg)
