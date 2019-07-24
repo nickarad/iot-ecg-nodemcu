@@ -2,3 +2,4 @@ arduino/secret-config.h
 *.bin
 *.elf
 .vscode/settings.json
+docker/.env
