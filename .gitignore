@@ -3,3 +3,4 @@ arduino/secret-config.h
 *.elf
 .vscode/settings.json
 docker/.env
+docker/telegraf.conf

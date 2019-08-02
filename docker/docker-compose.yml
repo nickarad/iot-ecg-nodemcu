@@ -88,6 +88,73 @@ services:
     command: server http://minio{1...4}/export
 
 
+    #----------------------------------------------------------------------------------------
+    #  TICK Stack
+    #----------------------------------------------------------------------------------------
+    influxdb:
+    image: influxdb:1.7-alpine
+    volumes:
+      # Mount for influxdb data directory
+      - ./influxdb/data:/var/lib/influxdb
+      # Mount for influxdb configuration
+      - ./influxdb/config/:/etc/influxdb/
+    ports:
+      # The API for InfluxDB is served on port 8086
+      - "8086:8086"
+      - "8082:8082"
+      # UDP Port
+      - "8089:8089/udp"
+
+  telegraf:
+    image: telegraf:1.11-alpine
+    environment:
+      HOSTNAME: "telegraf-getting-started"
+    # Telegraf requires network access to InfluxDB
+    links:
+      - influxdb
+    volumes:
+      # Mount for telegraf configuration
+      - ./telegraf.conf:/etc/telegraf/telegraf.conf:ro
+      # Mount for Docker API access
+      - /var/run/docker.sock:/var/run/docker.sock
+    depends_on:
+      - rabbitmq
+      - influxdb
+
+  kapacitor:
+    image: kapacitor:1.5-alpine
+    volumes:
+      # Mount for kapacitor data directory
+      - ./kapacitor/data/:/var/lib/kapacitor
+      # Mount for kapacitor configuration
+      - ./kapacitor/config/:/etc/kapacitor/
+    # Kapacitor requires network access to Influxdb
+    links:
+      - influxdb
+    ports:
+      # The API for Kapacitor is served on port 9092
+      - "9092:9092"
+
+  chronograf:
+    image: chronograf:1.7-alpine
+    environment:
+      RESOURCES_PATH: "/usr/share/chronograf/resources"
+    volumes:
+      # Mount for chronograf database
+      - ./chronograf/data/:/var/lib/chronograf/
+    links:
+      # Chronograf requires network access to InfluxDB and Kapacitor
+      - influxdb
+      - kapacitor
+    ports:
+      # The WebUI for Chronograf is served on port 8888
+      - "8888:8888"
+    depends_on:
+      - kapacitor
+      - influxdb
+      - telegraf
+
+
 #----------------------------------------------------------------------------------------
 #  VOLUMES AND NETWORKING
 #----------------------------------------------------------------------------------------
