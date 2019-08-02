@@ -6,6 +6,7 @@
 #include "secret-config.h"
 
 WiFiClient espClient;
+String macAddr;
 PubSubClient client(espClient);
 String msg;
 char payload[50];
@@ -30,6 +31,9 @@ void setup_wifi() {
 	Serial.println("WiFi connected");
 	Serial.println("IP address: ");
 	Serial.println(WiFi.localIP());
+
+	// Get ESP MAC Address and convert from byte array to string
+	macAddr = String(WiFi.macAddress());
 }
 
 void reconnect() {
@@ -39,7 +43,7 @@ void reconnect() {
 		Serial.print("Attempting MQTT connection...");
 		// Attempt to connect
 		// boolean connect (clientID, username, password, willTopic, willQoS, willRetain, willMessage)
-		if (client.connect(WiFi.macAddress(), mqtt_user, mqtt_pass, "willTopic", 2, 0, "willMessage")) {
+		if (client.connect(macAddr, mqtt_user, mqtt_pass, "willTopic", 2, 0, "willMessage")) {
 			Serial.println("connected");
 		} 
 		else {
@@ -59,22 +63,22 @@ void setup() {
 
 void loop() {
   
-	char msg[8];
+	char msg[32];
 
 	// Desired sample rate T=7812microseconds
 	if (micros() - lastMicros > 7812) {
 		lastMicros = micros();
 		// float temperatureC = getTemperature() ;
 		float ecg = getECG();
-		sprintf(msg,"%f",ecg);
+		sprintf(msg, "{\"macaddr\":\"%s\",\"data\": %f}", macAddr, ecg);
 		// Serial.print("temperature read");
 		if (!client.connected()) {
 			Serial.print("trying to reconnect...");
 			reconnect();
 		}
 
-		client.publish("mq2_mqtt", msg);
-		//Serial.print("Payload: ");
+		client.publish("ecg_data", msg);
+		Serial.print("Payload: ");
 		Serial.println(msg);
 	}
 }
