@@ -5,7 +5,7 @@ services:
   #----------------------------------------------------------------------------------------
   #  RabbitMQ Message Broker
   #----------------------------------------------------------------------------------------
-  rabbit:
+  rabbitmq:
     build: .
     image: clintelli-rabbitmq
     environment:
@@ -30,8 +30,6 @@ services:
       - 5432:5432
     env_file:
       - .env
-    networks:
-      - clintelli_private_docker_network
 
 
 
@@ -39,59 +37,51 @@ services:
   #  Minio S3-like Object Storage
   #----------------------------------------------------------------------------------------
 
-  minio1:
-    image: minio/minio
-    volumes:
-      - minio-data1:/export
-    ports:
-    - "9001:9000"
-    env_file:
-      - .env
-    networks:
-      - clintelli_private_docker_network
-    command: server http://minio{1...4}/export
+  # minio1:
+  #   image: minio/minio
+  #   volumes:
+  #     - minio-data1:/export
+  #   ports:
+  #   - "9001:9000"
+  #   env_file:
+  #     - .env
+  #   command: server http://minio{1...4}/export
 
-  minio2:
-    image: minio/minio
-    volumes:
-      - minio-data2:/export
-    ports:
-    - "9002:9000"
-    env_file:
-      - .env
-    networks:
-      - clintelli_private_docker_network
-    command: server http://minio{1...4}/export
+  # minio2:
+  #   image: minio/minio
+  #   volumes:
+  #     - minio-data2:/export
+  #   ports:
+  #   - "9002:9000"
+  #   env_file:
+  #     - .env
+  #   command: server http://minio{1...4}/export
 
-  minio3:
-    image: minio/minio
-    volumes:
-      - minio-data3:/export
-    ports:
-      - "9003:9000"
-    env_file:
-      - .env
-    networks:
-      - clintelli_private_docker_network
-    command: server http://minio{1...4}/export
+  # minio3:
+  #   image: minio/minio
+  #   volumes:
+  #     - minio-data3:/export
+  #   ports:
+  #     - "9003:9000"
+  #   env_file:
+  #     - .env
+  #   command: server http://minio{1...4}/export
 
-  minio4:
-    image: minio/minio
-    volumes:
-      - minio-data4:/export
-    ports:
-      - "9004:9000"
-    env_file:
-      - .env
-    networks:
-      - clintelli_private_docker_network
-    command: server http://minio{1...4}/export
+  # minio4:
+  #   image: minio/minio
+  #   volumes:
+  #     - minio-data4:/export
+  #   ports:
+  #     - "9004:9000"
+  #   env_file:
+  #     - .env
+  #   command: server http://minio{1...4}/export
 
 
-    #----------------------------------------------------------------------------------------
-    #  TICK Stack
-    #----------------------------------------------------------------------------------------
-    influxdb:
+  #----------------------------------------------------------------------------------------
+  #  TICK Stack
+  #----------------------------------------------------------------------------------------
+  influxdb:
     image: influxdb:1.7-alpine
     volumes:
       # Mount for influxdb data directory
@@ -160,11 +150,12 @@ services:
 #----------------------------------------------------------------------------------------
 
 volumes:
+  postgres_data:
   minio-data1:
   minio-data2:
   minio-data3:
   minio-data4:
 
-networks:
-  clintelli_private_docker_network:
-    external: true
+# networks:
+#   clintelli_private_docker_network:
+#     external: true
