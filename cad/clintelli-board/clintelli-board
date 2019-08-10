@@ -1,18 +1,24 @@
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    </head>
-    <body>
-    <h1>/home/karadalex/ehosp-workspace/clintelli/cad/clintelli-board/clintelli-board.sch</h1>
-    <p>Κυρ 21 Ιουλ 2019 12:13:52 μμ EEST</p>
-    <p>Eeschema 5.1.2-f72e74a~84~ubuntu18.04.1</p>
-    <p><b>Component Count:</b>24</p>
-    <table>
-    <tr><th style='width:640px'>Ref</th><th>Qnty</th><th>Value</th><th>Part</th><th>Datasheet</th><th>Description</th><th>Vendor</th></tr><tr><td>C1, C3, C9</td><td>3</td><td>100nF</td><td>clintelli-board-rescue:C-Pyramiduino-rescue</td><td></td><td></td><td></td></tr><tr><td>C2</td><td>1</td><td>10nF</td><td>clintelli-board-rescue:C-Pyramiduino-rescue</td><td></td><td></td><td></td></tr><tr><td>C4, C5</td><td>2</td><td>22pF</td><td>clintelli-board-rescue:C-Pyramiduino-rescue</td><td></td><td></td><td></td></tr><tr><td>C6, C7, C8</td><td>3</td><td>1uF</td><td>clintelli-board-rescue:C-Pyramiduino-rescue</td><td></td><td></td><td></td></tr><tr><td>D1</td><td>1</td><td>LED</td><td>clintelli-board-rescue:LED-Pyramiduino-rescue</td><td></td><td></td><td></td></tr><tr><td>IC1</td><td>1</td><td>ATMEGA328-A</td><td>clintelli-board-rescue:ATMEGA328-A-Pyramiduino-rescue</td><td></td><td></td><td></td></tr><tr><td>J1</td><td>1</td><td>AudioJack3_Ground</td><td>Connector:AudioJack3_Ground</td><td>~</td><td>Audio Jack, 3 Poles (Stereo / TRS), Grounded Sleeve</td><td></td></tr><tr><td>L1</td><td>1</td><td>10uH</td><td>clintelli-board-rescue:INDUCTOR-Pyramiduino-rescue</td><td></td><td></td><td></td></tr><tr><td>P4, P5, P6</td><td>3</td><td>CONN_01X01</td><td>clintelli-board-rescue:CONN_01X01-Pyramiduino-rescue</td><td></td><td></td><td></td></tr><tr><td>R1</td><td>1</td><td>100K</td><td>clintelli-board-rescue:R-Pyramiduino-rescue</td><td></td><td></td><td></td></tr><tr><td>R2</td><td>1</td><td>1k</td><td>clintelli-board-rescue:R-Pyramiduino-rescue</td><td></td><td></td><td></td></tr><tr><td>SW1</td><td>1</td><td>SW_PUSH</td><td>clintelli-board-rescue:SW_PUSH-Pyramiduino-rescue</td><td>https://www.ckswitches.com/media/1478/pts830.pdf</td><td></td><td></td></tr><tr><td>U1</td><td>1</td><td>3v3</td><td>clintelli-board-rescue:MIC5504-3.3YM5-Pyramiduino-rescue</td><td>http://www.microchip.com/mymicrochip/filehandler.aspx?ddocname=en580292</td><td></td><td></td></tr><tr><td>U2</td><td>1</td><td>ESP32-WROOM-32</td><td>RF_Module:ESP32-WROOM-32</td><td>https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32_datasheet_en.pdf</td><td>RF Module, ESP32-D0WDQ6 SoC, Wi-Fi 802.11b/g/n, Bluetooth, BLE, 32-bit, 2.7-3.6V, onboard antenna, SMD</td><td></td></tr><tr><td>U3</td><td>1</td><td>ADS1298xPAG</td><td>Analog_ADC:ADS1298xPAG</td><td>http://www.ti.com/lit/ds/symlink/ads1298.pdf</td><td>ADS1298 Low-Power, 8-Channel, 24-Bit Analog Front-End for Biopotential Measurements, TQFP-64</td><td></td></tr><tr><td>U4</td><td>1</td><td>ATECC608A-MAHDA</td><td>Security:ATECC608A-MAHDA</td><td>http://ww1.microchip.com/downloads/en/DeviceDoc/ATECC608A-CryptoAuthentication-Device-Summary-Data-Sheet-DS40001977B.pdf</td><td>Cryptographic Co-Processor with Secure Hardware-based 16 Key Storage, ECDSA and ECDH support, I2C, UDFN-8</td><td></td></tr><tr><td>Y1</td><td>1</td><td>16M</td><td>clintelli-board-rescue:Crystal_GND24-Pyramiduino-rescue</td><td></td><td></td><td></td></tr><!--TABLEROW-->
-    </table>
-    </body>
-</html>
-    
+"Source:","/home/karadalex/ehosp-workspace/clintelli/cad/clintelli-board/clintelli-board.sch"
+"Date:","Δευ 22 Ιουλ 2019 04:15:17 μμ EEST"
+"Tool:","Eeschema 5.1.2-f72e74a~84~ubuntu18.04.1"
+"Generator:","/usr/share/kicad/plugins/bom_csv_grouped_by_value_with_fp.py"
+"Component Count:","26"
+"Ref","Qnty","Value","Cmp name","Footprint","Description","Vendor"
+"C1, ","1","1.5nF","C","","",""
+"C5, C4, ","2","10pF","C","Capacitors_SMD:C_0805","",""
+"C8, C6, C7, ","3","1uF","C","Capacitors_SMD:C_0805","",""
+"C9, C3, ","2","100nF","C","Capacitors_SMD:C_0805","",""
+"D1, ","1","LED","LED","LEDs:LED_0805","",""
+"J1, ","1","AudioJack4_Ground","AudioJack4_Ground","","Audio Jack, 4 Poles (TRRS), Grounded Sleeve",""
+"J2, J3, ","2","AudioJack3_Ground","AudioJack3_Ground","","Audio Jack, 3 Poles (Stereo / TRS), Grounded Sleeve",""
+"L1, ","1","22uH","INDUCTOR","","",""
+"P1, P2, P3, P4, ","4","CONN_01X01","CONN_01X01","Mounting_Holes:MountingHole_2.2mm_M2_Pad","",""
+"R1, ","1","1M","R","","",""
+"R2, ","1","1k","R","Capacitors_SMD:C_0805","",""
+"SW1, ","1","SW_PUSH","SW_PUSH","My Libraries:SW_SPST_PTS830","",""
+"U1, ","1","VDD","MIC5504-3.3YM5","TO_SOT_Packages_SMD:SOT-23-5","",""
+"U2, ","1","ESP32-WROOM-32","ESP32-WROOM-32","RF_Module:ESP32-WROOM-32","RF Module, ESP32-D0WDQ6 SoC, Wi-Fi 802.11b/g/n, Bluetooth, BLE, 32-bit, 2.7-3.6V, onboard antenna, SMD",""
+"U3, ","1","ADS1298xPAG","ADS1298xPAG","Package_QFP:TQFP-64_10x10mm_P0.5mm","ADS1298 Low-Power, 8-Channel, 24-Bit Analog Front-End for Biopotential Measurements, TQFP-64",""
+"U4, ","1","ATECC608A-MAHDA","ATECC608A-MAHDA","Package_DFN_QFN:DFN-8-1EP_3x2mm_P0.5mm_EP1.3x1.5mm","Cryptographic Co-Processor with Secure Hardware-based 16 Key Storage, ECDSA and ECDH support, I2C, UDFN-8",""
+"U5, ","1","STM32F302RETx","STM32F302RETx","Package_QFP:LQFP-64_10x10mm_P0.5mm","ARM Cortex-M4 MCU, 512KB flash, 64KB RAM, 72MHz, 2-3.6V, 51 GPIO, LQFP-64",""
+"Y1, ","1","32MHz","Crystal_GND24","My Libraries:FA238-4pin_3.2x2.5mm_Offset","",""

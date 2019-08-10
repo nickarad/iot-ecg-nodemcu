@@ -12,6 +12,12 @@ https://funprojects.blog/2018/12/07/rabbitmq-for-iot/
 ### RabbitMQ - MQTT Protocol
 https://www.rabbitmq.com/mqtt.html
 
+### MQTT Quality of Service 
+https://www.hivemq.com/blog/mqtt-essentials-part-6-mqtt-quality-of-service-levels/
+
+### Arduino CLient for MQTT
+https://pubsubclient.knolleary.net/index.html
+
 ### DIY Arduino
 https://github.com/baldengineer/addohms/tree/master/Episode%2023%20Corrected
 

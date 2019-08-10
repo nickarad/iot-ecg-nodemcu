@@ -17,7 +17,8 @@ float getECG(void) {
 	// Read from analogic in. 
 	analog0 = analogRead(analogInPin);
 	// binary to voltage conversion
-	return analog0 = (float)analog0 * 3.3 / 1023.0;   
+	// return analog0 = (float)analog0 * 3.3 / 1023.0;   
+	return analog0;
 }
 
 void setup_wifi() {
@@ -38,8 +39,7 @@ void reconnect() {
 	while (!client.connected()) {
 		Serial.print("Attempting MQTT connection...");
 		// Attempt to connect
-		// boolean connect (clientID, username, password, willTopic, willQoS, willRetain, willMessage)
-		if (client.connect(WiFi.macAddress(), mqtt_user, mqtt_pass, "willTopic", 2, 0, "willMessage")) {
+		if (client.connect("Arduino_Gas", mqtt_user, mqtt_pass)) {
 			Serial.println("connected");
 		} 
 		else {
@@ -74,6 +74,7 @@ void loop() {
 		}
 
 		client.publish("mq2_mqtt", msg);
+		//client.publish("ecg_data", msg);
 		//Serial.print("Payload: ");
 		Serial.println(msg);
 	}

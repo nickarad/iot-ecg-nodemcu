@@ -72,7 +72,7 @@ def on_message(client, userdata, message):
 
 client = mqtt.Client()
 client.username_pw_set("rabbitmq", password='rabbitmq')
-client.connect("192.168.1.7", 1883) 
+client.connect("192.168.1.21", 1883) 
 
 client.on_connect = on_connect       #attach function to callback
 client.on_message = on_message       #attach function to callback

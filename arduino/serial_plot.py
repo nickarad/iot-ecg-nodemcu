@@ -17,7 +17,7 @@ def plotValues():
 	plt.legend(loc='upper right')
 
 #pre-load dummy data
-for i in range(0,100):
+for i in range(0,400):
 	values.append(0)
 	
 while True:
