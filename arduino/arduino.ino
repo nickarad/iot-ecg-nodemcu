@@ -77,14 +77,9 @@ void loop() {
 			reconnect();
 		}
 
-<<<<<<< HEAD
 		client.publish("mq2_mqtt", msg);
 		//client.publish("ecg_data", msg);
 		//Serial.print("Payload: ");
-=======
-		client.publish("ecg_data", msg);
-		Serial.print("Payload: ");
->>>>>>> 5714d4c3d807cd3f16c5288de9618d8c55d123be
 		Serial.println(msg);
 	}
 }
