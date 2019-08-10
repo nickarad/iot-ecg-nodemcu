@@ -37,45 +37,45 @@ services:
   #  Minio S3-like Object Storage
   #----------------------------------------------------------------------------------------
 
-  # minio1:
-  #   image: minio/minio
-  #   volumes:
-  #     - minio-data1:/export
-  #   ports:
-  #   - "9001:9000"
-  #   env_file:
-  #     - .env
-  #   command: server http://minio{1...4}/export
+  minio1:
+    image: minio/minio
+    volumes:
+      - minio-data1:/export
+    ports:
+    - "9001:9000"
+    env_file:
+      - .env
+    command: server http://minio{1...4}/export
 
-  # minio2:
-  #   image: minio/minio
-  #   volumes:
-  #     - minio-data2:/export
-  #   ports:
-  #   - "9002:9000"
-  #   env_file:
-  #     - .env
-  #   command: server http://minio{1...4}/export
+  minio2:
+    image: minio/minio
+    volumes:
+      - minio-data2:/export
+    ports:
+    - "9002:9000"
+    env_file:
+      - .env
+    command: server http://minio{1...4}/export
 
-  # minio3:
-  #   image: minio/minio
-  #   volumes:
-  #     - minio-data3:/export
-  #   ports:
-  #     - "9003:9000"
-  #   env_file:
-  #     - .env
-  #   command: server http://minio{1...4}/export
+  minio3:
+    image: minio/minio
+    volumes:
+      - minio-data3:/export
+    ports:
+      - "9003:9000"
+    env_file:
+      - .env
+    command: server http://minio{1...4}/export
 
-  # minio4:
-  #   image: minio/minio
-  #   volumes:
-  #     - minio-data4:/export
-  #   ports:
-  #     - "9004:9000"
-  #   env_file:
-  #     - .env
-  #   command: server http://minio{1...4}/export
+  minio4:
+    image: minio/minio
+    volumes:
+      - minio-data4:/export
+    ports:
+      - "9004:9000"
+    env_file:
+      - .env
+    command: server http://minio{1...4}/export
 
 
   #----------------------------------------------------------------------------------------
