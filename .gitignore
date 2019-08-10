@@ -5,3 +5,6 @@ arduino/secret-config.h
 sub/test.txt
 docker/.env
 docker/telegraf.conf
+docker/chronograf
+docker/influxdb
+docker/kapacitor
