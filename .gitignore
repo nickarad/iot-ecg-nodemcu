@@ -4,3 +4,6 @@ arduino/secret-config.h
 .vscode/settings.json
 docker/.env
 docker/telegraf.conf
+docker/chronograf
+docker/influxdb
+docker/kapacitor
