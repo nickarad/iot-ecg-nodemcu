@@ -2,6 +2,7 @@ arduino/secret-config.h
 *.bin
 *.elf
 .vscode/settings.json
+sub/test.txt
 docker/.env
 docker/telegraf.conf
 docker/chronograf

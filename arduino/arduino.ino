@@ -5,8 +5,13 @@
 #include <PubSubClient.h>
 #include "secret-config.h"
 
+#define MQTTpubQos		2  
+#define Retain			false
+#define willMessage 	"exit"
+#define cleanSession	false 
+#define willTopic		"mq2_mqtt"
+
 WiFiClient espClient;
-String macAddr;
 PubSubClient client(espClient);
 String msg;
 char payload[50];
@@ -18,7 +23,8 @@ float getECG(void) {
 	// Read from analogic in. 
 	analog0 = analogRead(analogInPin);
 	// binary to voltage conversion
-	return analog0 = (float)analog0 * 3.3 / 1023.0;   
+	// return analog0 = (float)analog0 * 3.3 / 1023.0;
+	return analog0;   
 }
 
 void setup_wifi() {
@@ -31,9 +37,6 @@ void setup_wifi() {
 	Serial.println("WiFi connected");
 	Serial.println("IP address: ");
 	Serial.println(WiFi.localIP());
-
-	// Get ESP MAC Address and convert from byte array to string
-	macAddr = String(WiFi.macAddress());
 }
 
 void reconnect() {
@@ -42,8 +45,7 @@ void reconnect() {
 	while (!client.connected()) {
 		Serial.print("Attempting MQTT connection...");
 		// Attempt to connect
-		// boolean connect (clientID, username, password, willTopic, willQoS, willRetain, willMessage)
-		if (client.connect(macAddr, mqtt_user, mqtt_pass, "willTopic", 2, 0, "willMessage")) {
+		if (client.connect("Arduino_Gas", mqtt_user, mqtt_pass,willTopic,MQTTpubQos,Retain,willMessage,cleanSession)) {
 			Serial.println("connected");
 		} 
 		else {
@@ -63,22 +65,22 @@ void setup() {
 
 void loop() {
   
-	char msg[32];
+	char msg[8];
 
 	// Desired sample rate T=7812microseconds
 	if (micros() - lastMicros > 7812) {
 		lastMicros = micros();
 		// float temperatureC = getTemperature() ;
 		float ecg = getECG();
-		sprintf(msg, "{\"macaddr\":\"%s\",\"data\": %f}", macAddr, ecg);
+		sprintf(msg,"%f",ecg);
 		// Serial.print("temperature read");
 		if (!client.connected()) {
 			Serial.print("trying to reconnect...");
 			reconnect();
 		}
 
-		client.publish("ecg_data", msg);
-		Serial.print("Payload: ");
+		client.publish("mq2_mqtt", msg);
+		//Serial.print("Payload: ");
 		Serial.println(msg);
 	}
 }
