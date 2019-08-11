@@ -31,7 +31,7 @@ def plotValues():
     
 
 #pre-load dummy data
-for i in range(0,100):
+for i in range(0,400):
     values.append(0)
  
 def on_connect(client, userdata, flags, rc):
@@ -72,10 +72,10 @@ def on_message(client, userdata, message):
 
 client = mqtt.Client()
 client.username_pw_set("rabbitmq", password='rabbitmq')
-client.connect("192.168.1.21", 1883) 
+client.connect("104.155.172.54", 1883) 
 
 client.on_connect = on_connect       #attach function to callback
 client.on_message = on_message       #attach function to callback
-
-client.subscribe("mq2_mqtt") 
+QoS = 1
+client.subscribe("mq2_mqtt",QoS) 
 client.loop_forever()                 #start the loop
